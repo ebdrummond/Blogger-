@@ -1,0 +1,12 @@
+<h1>Hello dude, IM RIDING THE RAILS</h1>
+
+<ul id="articles">
+  <% @articles.each do |article| %>
+    <li>
+  <h3><%= link_to article.title, article_path(article)%></h3>
+  </li>
+  <p><%= article.body %></p>
+<% end %>
+</ul>
+
+<%= link_to "Create a New Article ~ YOU HUMAN!", new_article_path, class: "new_article" %>
